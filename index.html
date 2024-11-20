@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👋 Hi, I'm Grant</title>
+
+    <link
+      rel="preload"
+      href="fonts/Libre-Baskerville-Regular-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <style>
+      @font-face {
+        font-display: swap;
+        font-family: "Libre Baskerville";
+        font-style: normal;
+        font-weight: 400;
+        src: url(fonts/Libre-Baskerville-Regular-400.woff2) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+          U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      :root {
+        --font-serif: "Libre Baskerville", Georgia, serif;
+      }
+
+      body {
+        background-color: #f9f3e1;
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 4em auto;
+        padding: 0 20px;
+      }
+
+      h1 {
+        font-size: clamp(3.8rem, 10vw, 7rem);
+      }
+
+      .tagline {
+        font-size: clamp(2.5rem, 5vw, 3rem);
+        margin-bottom: 6rem;
+        position: relative;
+      }
+
+      ul.dynamic {
+        list-style: none;
+        margin: 0;
+        padding: 0 0.5rem;
+      }
+
+      .dynamic {
+        color: #2b41a2;
+        display: inline-block;
+        font-style: italic;
+        height: 1.5em;
+        overflow: hidden;
+        vertical-align: bottom;
+      }
+
+      .dynamic > li {
+        display: block;
+        height: 100%;
+      }
+
+      @media (min-width: 650px) {
+        .adjective li {
+          text-align: center;
+        }
+      }
+
+      .links {
+        display: flex;
+        gap: 18px;
+        list-style: none;
+        margin-bottom: 2rem;
+        padding: 0 1.5rem;
+      }
+
+      .links a {
+        display: block;
+        height: 48px;
+        width: 48px;
+      }
+
+      a:focus {
+        outline: 2px solid #2b41a2;
+        outline-offset: 4px;
+      }
+
+      @keyframes slide3 {
+        0%,
+        26.66% {
+          transform: translateY(0%);
+        }
+        33.33%,
+        60% {
+          transform: translateY(-100%);
+        }
+        66.66%,
+        93.32% {
+          transform: translateY(-200%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes slide4 {
+        0%,
+        20% {
+          transform: translateY(0%);
+        }
+        25%,
+        45% {
+          transform: translateY(-100%);
+        }
+        50%,
+        70% {
+          transform: translateY(-200%);
+        }
+        75%,
+        95% {
+          transform: translateY(-300%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes slide5 {
+        0%,
+        16% {
+          transform: translateY(0%);
+        }
+        20%,
+        36% {
+          transform: translateY(-100%);
+        }
+        40%,
+        56% {
+          transform: translateY(-200%);
+        }
+        60%,
+        76% {
+          transform: translateY(-300%);
+        }
+        80%,
+        96% {
+          transform: translateY(-400%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes slide6 {
+        0%,
+        13.33% {
+          transform: translateY(0%);
+        }
+        16.66%,
+        29.99% {
+          transform: translateY(-100%);
+        }
+        33.33%,
+        46.66% {
+          transform: translateY(-200%);
+        }
+        50%,
+        63.33% {
+          transform: translateY(-300%);
+        }
+        66.66%,
+        79.99% {
+          transform: translateY(-400%);
+        }
+        83.33%,
+        96.66% {
+          transform: translateY(-500%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      .slide3 > li {
+        animation: slide3 18s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+      }
+
+      .slide4 > li {
+        animation: slide4 21s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+      }
+
+      .slide5 > li {
+        animation: slide5 24s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+      }
+
+      .slide6 > li {
+        animation: slide6 27s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+      }
+
+      .slide7 > li {
+        animation: slide7 30s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .slide3 > li,
+        .slide4 > li,
+        .slide5 > li,
+        .slide6 > li,
+        .slide7 > li {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>👋 Hi, I'm Grant...</h1>
+      </header>
+      <main>
+        <section class="tagline">
+          I make
+          <ul class="dynamic adjective slide5">
+            <li>open-source</li>
+            <li>accessible</li>
+            <li>full-stack</li>
+            <li>scalable</li>
+            <li>thoughtful</li>
+          </ul>
+          software for
+          <ul class="dynamic noun slide3">
+            <li>the web.</li>
+            <li>human beings.</li>
+            <li>social good.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Find me on</h2>
+          <ul class="links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/grant-m-kinney/"
+                aria-label="Visit my LinkedIn profile"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="rgb(10, 102, 194)"
+                  width="48px"
+                  height="48px"
+                  role="img"
+                  aria-hidden="true"
+                >
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/creativecoder"
+                aria-label="Visit my GitHub profile"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#000"
+                  height="48px"
+                  width="48px"
+                  viewBox="0 0 24 24"
+                  role="img"
+                  aria-hidden="true"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hi@grant.mk" aria-label="Send me an email">
+                <svg
+                  width="48px"
+                  height="48px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-hidden="true"
+                >
+                  <title>Email</title>
+                  <path
+                    d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
